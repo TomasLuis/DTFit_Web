@@ -1,0 +1,82 @@
+.box{
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFF0F5;
+    text-align: center;
+    border-radius: 30px;
+    opacity: 0.7;
+}
+
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type= "text"],.box input[type= "float"]{
+    border: 0;
+    background:none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid  #F08080;   
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #000000;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box input[type="text"]:focus,.box input[type="float"]:focus{
+    width: 280px;
+    border-color: #A9A9A9;
+}
+.box input[type="submit"]{
+    border: 0;
+    background:none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 40px;
+    outline: none;
+    color: #48D1CC;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover{
+    background-color: #3498db;
+    
+}
+
+
+.h2{
+color: #000000;
+text-align: center;
+padding: 50px;
+font-weight: 800;
+font-family: Fantasy ;
+font-size: 50px;
+
+}
+.altura{
+    color: #F5F5DC; 
+}
+
+
+.h3{
+color: #A9A9A9;
+font-weight: 800;
+}
+
+#cancelar{
+text-decoration: none;
+}
+.input{
+text-decoration-color: #000000;
+}
