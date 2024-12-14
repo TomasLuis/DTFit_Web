@@ -1,0 +1,106 @@
+.box {
+    background-color: rgba(31, 41, 55, 0.9); /* Fundo escuro com transparência */
+    border-radius: 12px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.text-center {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ecf0f1; /* Texto claro para contraste */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #ecf0f1; /* Cor clara nos labels */
+}
+
+.input-container input {
+    background-color: #2c3e50; /* Cor de fundo mais escura para os inputs */
+    color: #ecf0f1; /* Texto claro dentro dos inputs */
+    border: 1px solid #34495e; /* Borda escura para os inputs */
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #3498db; /* Cor azul clara quando em foco */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+.help-block {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.btn {
+    background-color: #34495e; /* Cor de fundo escura para os botões */
+    color: #fff;
+    border: none;
+    padding: 8px 15px; /* Botões menores */
+    width: 48%; /* Botões ocupam metade da largura */
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espaçamento superior */
+    display: inline-block; /* Faz os botões ficarem lado a lado */
+}
+
+.btn:hover {
+    background-color: #2c3e50; /* Cor mais escura no hover */
+}
+
+.btn:active {
+    background-color: #1c2d3b;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+p a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 20px 30px;
+    }
+
+    .text-center {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%; /* Botões ocupam toda a largura em telas menores */
+        margin-bottom: 10px;
+    }
+}

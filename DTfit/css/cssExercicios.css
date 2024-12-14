@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+.header-bracos {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #300e07, #4b1103);
+    color: white;
+    padding: 30px 20px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.header-bracos h1 {
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.header-bracos p {
+    font-size: 16px;
+}
+
+/* Contêiner dos exercícios */
+.exercise-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center; /* Alinha os itens no centro */
+}
+
+/* Itens de exercício */
+.exercise-item {
+    background-color:white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    animation: fadeIn 0.8s forwards ease-in-out;
+    animation-delay: calc(var(--order) * 0.2s); /* Cascata */
+    width: 90%; /* Largura ajustada para ficar proporcional */
+    max-width: 350px; /* Limite */
+
+}
+
+.exercise-item img {
+    width: 60%;
+    height: 200px;
+    justify-content: center;
+    border-bottom: 4px solid #cb7e11;
+}
+
+.exercise-info {
+    padding: 20px;
+}
+
+.exercise-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.exercise-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Hover nos itens */
+.exercise-item:hover {
+    transform: scale(1.5);
+    transition: ease-in-out 500ms;
+    box-shadow: 10px 10px 6px #40130a;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries para telas menores */
+@media screen and (max-width: 1024px) {
+    .exercise-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas médias */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .exercise-container {
+        grid-template-columns: 1fr; /* 1 coluna para telas pequenas (celulares) */
+    }
+
+    .exercise-item img {
+        width: 80%; /* Ajuste o tamanho da imagem */
+        height: auto; /* Ajusta automaticamente a altura da imagem */
+    }
+
+    .header-braços h1 {
+        font-size: 28px; /* Ajusta o tamanho do título para telas pequenas */
+    }
+
+    .header-braços p {
+        font-size: 16px; /* Ajusta o tamanho da descrição */
+    }
+
+    .exercise-info h2 {
+        font-size: 18px; /* Ajusta o título dos exercícios */
+    }
+
+    .exercise-info p {
+        font-size: 14px; /* Ajusta o tamanho da descrição */
+    }
+}

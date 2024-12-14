@@ -1,0 +1,79 @@
+/* Reset básico para diferentes browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do menu */
+#menu {
+  background: #e6e6e6;
+  height: 65px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nomedosite {
+  font-family: Fantasy;
+  font-size: 35px;
+}
+
+/* Estilo dos cards */
+.card {
+  width: 100%;
+  max-width: 350px; /* Aumenta um pouco a largura dos cards */
+  height: 50%; /* Altura */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve nos cards */
+  transition: transform 0.3s ease; /* Animação ao passar o rato */
+  display: flex;
+  flex-direction: column; /* Garante o alinhamente deles */
+}
+
+.card:hover {
+  transform: scale(1.08); /* Efeito de aumento ao passar o rato */
+}
+
+/* Botão */
+#butao {
+  border-radius: 100px; /* Bordas arredondadas no botão */
+}
+
+/* Rodapé dos cards */
+.card-footer {
+  text-align: center;
+}
+
+/* Contêiner dos cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Espaço entre os cards */
+  padding: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards-container {
+    gap: 20px; /* Reduz espaço entre os cards */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%; /* Cards ocupam 100% da largura em telas pequenas */
+    height: auto; /* Altura se ajusta ao conteúdo */
+  }
+
+  .card-img-top {
+    height: auto; /* Permite que a imagem se ajuste ao tamanho do card */
+  }
+
+  .card:nth-child(2) {
+    order: 3; /* Move o segundo card para a terceira posição */
+  }
+}
