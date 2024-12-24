@@ -1,0 +1,137 @@
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.calculator-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 70px 30px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px; 
+    text-align: center;
+    margin-top: 80px; 
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+label {
+    font-size: 18px;
+    color: #555;
+    display: block;
+    margin: 15px 0 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.resultado {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.resultado span {
+    font-weight: bold;
+    color: #f509f5;
+}
+
+.resultadoHomem {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.resultadoHomem span {
+    font-weight: bold;
+    color: #1500cd;
+}
+
+.btn:hover{
+    color:#ffc4d8;
+}
+
+.navbar{
+    background-color: #e6e6e6;
+}
+
+.btn{
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .calculator-container {
+        padding: 30px 20px;
+        max-width: 90%;
+        margin-top: 120px; 
+    }
+
+    .navbar h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    input[type="number"] {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cssMenu.css">
+    <title>Menu</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div></div> 
+        <div style="padding-left: 100px;">DTFIT</div>
+        <a href="welcome.php" style="text-decoration: none;">
+            <button class="personal-area-btn">
+                Área Pessoal
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <!-- Carrossel -->
+    <section class="carousel">
+        <div class="carousel-slide">
+            <!-- primeiro -->
+            <div class="carousel-item" style="background-image: url('img/menu-exercicios.jpg');">
+                <div class="carousel-caption">
+                    <h2>Exercícios</h2>
+                    <p>Aqui, podes encontrar diversos exercícios para trabalhar cada parte do corpo, melhorar a tua flexibilidade, resistência e força.</p>
+                    <p>Não importa o teu objetivo, há sempre um exercício perfeito para ti!</p>
+                    <a href="treinos.html" style="text-decoration: none;"><button>Ver Mais</button></a>
+                </div>
+            </div>
+
+            <!-- Segundo -->
+            <div class="carousel-item" style="background-image: url('img/menu-imc.png');">
+                <div class="carousel-caption">
+                    <h2 class="corIMC-h2">Calcular IMC</h2>
+                    <p class="corIMC">O IMC é uma ferramenta importante para avaliar se o teu peso está dentro da faixa saudável para a tua altura.</p>
+                    <p class="corIMC">Após inserir o teu peso e altura, poderás ver o valor do teu IMC e obter uma interpretação sobre o teu estado atual.</p>
+                    <a href="pesagem-escolher-sexo.html" style="text-decoration: none;"><button>Ver Mais</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões -->
+        <button class="nav-btn prev">&#10094;</button>
+        <button class="nav-btn next">&#10095;</button>
+    </section>
+
+    <script>
+        const slideContainer = document.querySelector('.carousel-slide');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        let currentSlide = 0;
+
+        function changeSlide(index) {
+            currentSlide = index;
+
+            if (currentSlide < 0) currentSlide = 1;
+            if (currentSlide > 1) currentSlide = 0;
+
+            slideContainer.style.transform = `translateX(${-100 * currentSlide}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => changeSlide(currentSlide - 1));
+        nextBtn.addEventListener('click', () => changeSlide(currentSlide + 1));
+    </script>
+
+</body>
+</html>

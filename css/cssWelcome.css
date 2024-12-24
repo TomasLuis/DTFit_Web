@@ -1,0 +1,240 @@
+body {
+  text-align: center;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.page-header {
+  padding-bottom: 20px;
+} 
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  background: transparent;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menu-wrap .hamburger > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: inherit;
+  height: 2px;
+  width: 100%;
+  z-index: 1;
+}
+
+.menu-wrap .hamburger > div:after {
+  top: -10px;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(10, 23, 55, 0.5);
+  height: 100vh;
+  width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+}
+
+.menu > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 1rem 0;
+}
+
+.menu > div a {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.menu a:hover {
+  color: #b9d4d6;
+  transition: color 0.3s ease-in;
+}
+
+.menu-wrap .toggler:checked ~ .menu {
+  opacity: 1;
+  width: 30vw;
+  transition: all var(--menu-speed) ease;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  opacity: 1;
+  transition: opacity 0.4s ease-in;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div a {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+:root {
+  --menu-speed: 1s;
+}
+
+.botaoSite {
+  background: linear-gradient(to bottom, #0e6b23 5%, #02c72d 100%);
+  background-color: #20632f;
+  border-radius: 42px;
+  border: 1px solid #1f522e;
+  color: #ffffff;
+  font-family: Trebuchet MS;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 50px;
+  text-decoration: none;
+  position: flex;
+}
+.botaoSite:hover {
+  background: linear-gradient(to bottom, #1fdefc 5%, #599bb3 100%);
+  background-color: #1f5424;
+  text-decoration: none;
+}
+
+.nome {
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  .page-header h1 {
+    font-size: 2rem; /* Reduz o tamanho em telas pequenas */
+  }
+
+  .calorias h1 {
+    font-size: 2rem;
+  }
+
+  .menu-wrap .menu {
+    width: 80vw; /* Ajusta a largura do menu lateral para dispositivos móveis */
+  }
+
+  .menu > div a {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte dos links do menu */
+  }
+
+  .botaoSite {
+    font-size: 16px; /* Reduz o tamanho da fonte no botão */
+    padding: 10px 30px; /* Ajusta o espaçamento do botão */
+  }
+
+  .page-header h1 {
+    font-size: 1.2rem; /* Ajusta o tamanho do título */
+  }
+
+  .menu-wrap .hamburger {
+    width: 50px; /* Ajusta a largura do hamburger */
+    height: 50px; /* Ajusta a altura do hamburger */
+  }
+
+  .menu-wrap .hamburger > div {
+    height: 2px; /* Ajusta a espessura da linha do hamburger */
+  }
+
+  .menu-wrap .menu ul {
+    padding: 0;
+  }
+
+  .menu-wrap .menu li {
+    padding: 1rem 0; /* Ajusta o espaçamento dos itens do menu */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .page-header h1 {
+    font-size: 1rem; /* Ajusta o tamanho do título em telas pequenas */
+  }
+
+  .calorias h1 {
+    font-size: 1rem;
+  }
+
+  .menu-wrap .menu {
+    width: 90vw; /* Ajusta ainda mais a largura do menu para telas menores */
+  }
+
+  .botaoSite {
+    font-size: 14px; /* Reduz o tamanho da fonte no botão em telas muito pequenas */
+    padding: 8px 20px; /* Ajusta o tamanho do botão */
+  }
+
+}
+  

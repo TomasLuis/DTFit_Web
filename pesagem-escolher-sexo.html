@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolher Sexo</title>
+    <link rel="stylesheet" href="css/cssPesagem.css">  
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .lado-homem {
+            background-image: url('img/imc/homem.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .lado-mulher {
+            background-image: url('img/imc/mulher.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="imc-homem.html" class="lado lado-homem">
+            <span class="simbolo">♂</span>
+        </a>
+
+        <a href="imc-mulher.html" class="lado lado-mulher">
+            <span class="simbolo">♀</span>
+        </a>
+    </div>
+</body>
+</html>

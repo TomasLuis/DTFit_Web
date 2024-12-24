@@ -1,0 +1,72 @@
+/* Estilo geral para o contêiner da caixa de login */
+.box {
+    width: 430px;
+    padding: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #191919;
+    text-align: center;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+/* Título da caixa */
+.box h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Campos de entrada */
+.box input[type="text"], 
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #FF8C00;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus, 
+.box input[type="password"]:focus {
+    width: 280px;
+    border-color: #FFD700;
+}
+
+/* Botão de envio */
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #FFD700;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background-color: #FFD700;
+}
+
+/* Estilo do título principal */
+.h1 {
+    text-align: center;
+    padding: 50px;
+    font-weight: 800;
+    font-family: Fantasy;
+    font-size: 50px;
+}
